@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1, minimal-ui'>
+	<title>Kids Math</title>
+	<link rel='stylesheet' href='./css/math.css'>
+</head>
+
+<body>
+	<nav class='options'>
+		<label>Add <input type='checkbox' name='addition' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+		<label>Subtract <input type='checkbox' name='subtraction' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+		<label>Lower <input type='text' name='lower' maxlength='3' /></label>
+		<label>Upper <input type='text' name='upper' maxlength='3' /></label>
+		<label>Min <input type='text' name='min' maxlength='3' /></label>
+		<label>Max <input type='text' name='max' maxlength='3' /></label>
+		<label>Display <input type='text' name='limit' maxlength='3' /></label>
+		<label>Randomize <input type='checkbox' name='randomize' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+		<label>Carrying <input type='checkbox' name='carry' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+		<label>Responsive <input type='checkbox' name='responsive' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+		<label>Answers <input type='checkbox' name='answers' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+	</nav>
+
+	<div class='content'>
+		<ul id='numbers'></ul>
+	</div>
+</body>
+
+<script src='./js/jquery-2.1.1.min.js'></script>
+<script src='./js/math.js'></script>
+
+</html>

@@ -1,0 +1,125 @@
+
+/* -----[ Base ]--------------------------------------------------------------------- */
+
+body,div,p,ul,ol,li,h1,h2,h3,h4,h5,h6,
+table,th,td,form,label,input,textarea {
+	margin: 0;
+	padding: 0;
+}
+html, input, textarea, select {
+	color: #444;
+	font: bold 22px/1.5 Courier,monospace;
+}
+
+/* -----[ Icon Font ]--------------------------------------------------------------------- */
+/* See: http://fortawesome.github.io/Font-Awesome/icons/ */
+
+@font-face {
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../font/fontawesome-webfont.eot?v=4.2.0');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'),
+  	url('../font/fontawesome-webfont.woff?v=4.2.0') format('woff'),
+  	url('../font/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
+  	url('../font/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+}
+[class^="icon-"] {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"]:before {
+	speak: none;
+	text-decoration: none !important;
+}
+.icon-tick:before {
+	content: "\f00c"; /* fa-check */
+}
+
+/* -----[ Layout ]--------------------------------------------------------------------- */
+
+nav {
+	background-color: #41B5E8;
+	color: rgba(0, 0, 0, 0.5);
+	font-family: Arial,sans-serif;
+	font-size: 15px;
+}
+nav label {
+	margin-right: 0.3rem;
+}
+.options,
+.content {
+	margin: 0 0 1rem;
+	padding: 10px 16px;
+}
+
+/* -----[ Numbers ]--------------------------------------------------------------------- */
+
+#numbers {
+	/*-moz-column-fill: auto;*/
+	-moz-column-width: 8rem;
+	-moz-column-gap: 2rem;
+	/*-webkit-column-fill: auto;*/
+	-webkit-column-width: 8rem;
+	-webkit-column-gap: 2rem;
+	column-width: 8rem;
+	column-gap: 2rem;
+}
+#numbers li {
+	margin: 0 0 1rem;
+	list-style: none;
+	text-align: right;
+	white-space: nowrap;
+}
+
+/* -----[ Input ]--------------------------------------------------------------------- */
+
+nav input[type=text],
+.terms input[type=text] {
+	width: 1.8rem;
+	padding: 3px 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 2px solid rgba(0, 0, 0, 0.5);
+	text-align: center;
+}
+nav input[type=text] {
+	border-radius: 5px;
+	font-size: 15px;
+}
+.terms input[type=text] {
+	border: 0;
+	border-bottom: 2px solid #333;
+}
+.terms input[type=text]:focus {
+	background: #EEE;
+}
+
+/* -----[ Checkbox ]--------------------------------------------------------------------- */
+
+nav input[type=checkbox] {
+	display: none;
+}
+nav .faux-checkbox {
+	display: inline-block;
+	width: 1rem;
+	padding: 3px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 2px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	color: rgba(0, 0, 0, 0.1);
+	line-height: 1;
+	text-align: center;
+	cursor: pointer;
+}
+nav input[type=checkbox]:checked + .faux-checkbox {
+	color: rgba(0, 0, 0, 0.7);
+}
+nav .faux-checkbox i {
+	display: inline-block;
+	line-height: 1.5;
+	text-indent: -9999px;
+}
