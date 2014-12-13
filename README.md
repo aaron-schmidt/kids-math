@@ -5,7 +5,7 @@ Simple addition/subtraction problems for school-age children with the ability to
 Check out <http://www.gravitybell.com/math> for working example.
 
 
-### What's included?
+## What's included?
 
 ```
 kids-math/
@@ -22,11 +22,10 @@ kids-math/
 
 ## Browser support
 
-- Chrome latest
-- Firefox latest
-- Opera latest
-- Safari latest
-- IE latest
+- Chrome
+- IE 10+
+- Safari
+- Firefox
 
 
 ## License
