@@ -35,10 +35,12 @@ GB.Math = function()
 
 		bindEvents();
 		setDefaults();
-
 		var options = getOptions();
+
 		var matrix = buildMatrix(options);
 		displayMatrix(matrix, options);
+
+		updateSummary();
 	}
 
 	//--------------------------------------------------------------
@@ -46,14 +48,14 @@ GB.Math = function()
 	{
 		console.log('GB.Math.bindEvents');
 
-		$('.options').on('change', 'input', updateOption);
+		$('#options').on('submit', applyOptions);
 		$('#numbers').on('change', 'input', updateAnswer);
 	}
 
 	//--------------------------------------------------------------
-	function updateOption(e)
+	function applyOptions()
 	{
-		console.log('GB.Math.updateOption');
+		console.log('GB.Math.applyOptions');
 	}
 
 	//--------------------------------------------------------------
@@ -74,6 +76,31 @@ GB.Math = function()
 				$target.addClass('answer-incorrect');
 			}
 		}
+
+		updateSummary();
+	}
+
+	//--------------------------------------------------------------
+	function updateSummary()
+	{
+		console.log('GB.Math.updateSummary');
+
+		var numbers = {
+			total: $('.answer').length,
+			right: $('.answer-correct').length,
+			wrong: $('.answer-incorrect').length
+		};
+
+		var html = [];
+		html.push("<li>Number of problems: " + numbers.total + "</li>");
+		if (numbers.right) {
+			html.push("<li>Number correct: " + numbers.right + "</li>");
+		}
+		if (numbers.wrong) {
+			html.push("<li>Number incorrect: " + numbers.wrong + "</li>");
+		}
+
+		$('#summary').html(html.join(''));
 	}
 
 	//--------------------------------------------------------------
@@ -97,7 +124,7 @@ GB.Math = function()
 	{
 		console.log('GB.Math.getOptions');
 
-		return {
+		var options = {
 			lower: parseInt($('[name=lower]').val()),
 			upper: parseInt($('[name=upper]').val()),
 			min: parseInt($('[name=min]').val()),
@@ -110,6 +137,10 @@ GB.Math = function()
 			responsive: $('[name=responsive]').is(':checked'),
 			answers: $('[name=answers]').is(':checked'),
 		};
+
+		$('body').toggleClass('option-responsive', options.responsive);
+
+		return options;
 	}
 
 	//---------------------------------------------------------------

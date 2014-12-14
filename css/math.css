@@ -10,6 +10,9 @@ html, input, textarea, select {
 	color: #444;
 	font: bold 22px/1.5 Courier,monospace;
 }
+body {
+	background-color: #EEE;
+}
 
 /* -----[ Icon Font ]--------------------------------------------------------------------- */
 /* See: http://fortawesome.github.io/Font-Awesome/icons/ */
@@ -38,19 +41,22 @@ html, input, textarea, select {
 
 /* -----[ Layout ]--------------------------------------------------------------------- */
 
-nav {
+.nav,
+.footer {
+	padding: 10px 16px;
+	font-family: Arial,sans-serif;
+	font-size: 14px;
+}
+.nav {
 	background-color: #41B5E8;
 	color: rgba(0, 0, 0, 0.5);
-	font-family: Arial,sans-serif;
-	font-size: 15px;
 }
-nav label {
+.nav label {
 	margin-right: 0.3rem;
 }
-.options,
 .content {
-	margin: 0 0 1rem;
-	padding: 10px 16px;
+	padding: 20px 16px;
+	background-color: #FFF;
 }
 
 /* -----[ Numbers ]--------------------------------------------------------------------- */
@@ -72,34 +78,43 @@ nav label {
 	white-space: nowrap;
 }
 
+/* -----[ Summary ]--------------------------------------------------------------------- */
+
+#summary li {
+	margin: 0 0 0.5rem;
+	list-style: none;
+	text-align: right;
+}
+
 /* -----[ Input ]--------------------------------------------------------------------- */
 
 nav input[type=text],
 .answer {
-	width: 1.8rem;
 	padding: 3px 5px;
 	background-color: rgba(255, 255, 255, 0.5);
 	border: 2px solid rgba(0, 0, 0, 0.5);
 	text-align: center;
 }
 nav input[type=text] {
+	width: 1.5rem;
 	border-radius: 5px;
 	font-size: 15px;
 }
 .answer {
+	width: 1.8rem;
 	border: 0;
 	border-bottom: 2px solid #333;
 }
 .answer:focus {
 	background: #EEE;
 }
-.answer-correct {
+.option-responsive .answer-correct {
 	background-color: #EFE;
-	border-bottom-color: #060;
+	border-bottom-color: #090;
 }
-.answer-incorrect {
+.option-responsive .answer-incorrect {
 	background-color: #FEE;
-	border-bottom-color: #600;
+	border-bottom-color: #900;
 }
 
 /* -----[ Checkbox ]--------------------------------------------------------------------- */

@@ -9,23 +9,30 @@
 </head>
 
 <body>
-	<nav class='options'>
-		<label>Add <input type='checkbox' name='addition' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
-		<label>Subtract <input type='checkbox' name='subtraction' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
-		<label>Lower <input type='text' name='lower' maxlength='3' /></label>
-		<label>Upper <input type='text' name='upper' maxlength='3' /></label>
-		<label>Min <input type='text' name='min' maxlength='3' /></label>
-		<label>Max <input type='text' name='max' maxlength='3' /></label>
-		<label>Display <input type='text' name='limit' maxlength='3' /></label>
-		<label>Randomize <input type='checkbox' name='randomize' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
-		<label>Carrying <input type='checkbox' name='carry' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
-		<label>Responsive <input type='checkbox' name='responsive' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
-		<label>Answers <input type='checkbox' name='answers' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+	<nav class='nav'>
+		<form id='options' method='get' action='#'>
+			<label>Add <input type='checkbox' name='addition' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+			<label>Subtract <input type='checkbox' name='subtraction' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+			<label>Lower <input type='text' name='lower' maxlength='3' /></label>
+			<label>Upper <input type='text' name='upper' maxlength='3' /></label>
+			<label>Min <input type='text' name='min' maxlength='3' /></label>
+			<label>Max <input type='text' name='max' maxlength='3' /></label>
+			<label>Display <input type='text' name='limit' maxlength='3' /></label>
+			<label>Randomize <input type='checkbox' name='randomize' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+			<label>Carrying <input type='checkbox' name='carry' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+			<label>Responsive <input type='checkbox' name='responsive' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+			<label>Answers <input type='checkbox' name='answers' value='1' /><span class='icon-tick faux-checkbox'><i>1</i></span></label>
+			<button>Apply</button>
+		</form>
 	</nav>
 
-	<div class='content'>
+	<article class='content'>
 		<ul id='numbers'></ul>
-	</div>
+	</article>
+
+	<section class='footer'>
+		<ul id='summary'></ul>
+	</section>
 </body>
 
 <script src='./js/jquery-2.1.1.min.js'></script>
