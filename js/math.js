@@ -33,10 +33,47 @@ GB.Math = function()
 	{
 		console.log('GB.Math.init');
 
+		bindEvents();
 		setDefaults();
+
 		var options = getOptions();
 		var matrix = buildMatrix(options);
 		displayMatrix(matrix, options);
+	}
+
+	//--------------------------------------------------------------
+	function bindEvents()
+	{
+		console.log('GB.Math.bindEvents');
+
+		$('.options').on('change', 'input', updateOption);
+		$('#numbers').on('change', 'input', updateAnswer);
+	}
+
+	//--------------------------------------------------------------
+	function updateOption(e)
+	{
+		console.log('GB.Math.updateOption');
+	}
+
+	//--------------------------------------------------------------
+	function updateAnswer(e)
+	{
+		console.log('GB.Math.updateAnswer');
+
+		var $target = $(e.target);
+
+		$target.removeClass('answer-correct');
+		$target.removeClass('answer-incorrect');
+
+		if ($target.val().length) {
+			if (parseInt($target.val()) === parseInt($target.attr('data-answer'))) {
+				$target.addClass('answer-correct');
+			}
+			else {
+				$target.addClass('answer-incorrect');
+			}
+		}
 	}
 
 	//--------------------------------------------------------------
@@ -194,7 +231,7 @@ GB.Math = function()
 			var answer = item.operation === ENUM.subtract
 				? item.terms[0] - item.terms[1]
 				: item.terms[0] + item.terms[1];
-			var input = "<input type='text' data-answer='" + answer + "' value='" + (options.answers ? answer : '') + "' maxlength='" + answer.toString().length + "' />";
+			var input = "<input type='text' class='answer' data-answer='" + answer + "' value='" + (options.answers ? answer : '') + "' maxlength='" + answer.toString().length + "' />";
 			html.push("<li class='terms'>" + item.terms[0] + " " + item.operation + " " + item.terms[1] + " = " + input + "</li>");
 		});
 

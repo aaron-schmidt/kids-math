@@ -75,7 +75,7 @@ nav label {
 /* -----[ Input ]--------------------------------------------------------------------- */
 
 nav input[type=text],
-.terms input[type=text] {
+.answer {
 	width: 1.8rem;
 	padding: 3px 5px;
 	background-color: rgba(255, 255, 255, 0.5);
@@ -86,12 +86,20 @@ nav input[type=text] {
 	border-radius: 5px;
 	font-size: 15px;
 }
-.terms input[type=text] {
+.answer {
 	border: 0;
 	border-bottom: 2px solid #333;
 }
-.terms input[type=text]:focus {
+.answer:focus {
 	background: #EEE;
+}
+.answer-correct {
+	background-color: #EFE;
+	border-bottom-color: #060;
+}
+.answer-incorrect {
+	background-color: #FEE;
+	border-bottom-color: #600;
 }
 
 /* -----[ Checkbox ]--------------------------------------------------------------------- */
