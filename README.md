@@ -2,7 +2,7 @@
 # Kids Math
 Simple addition/subtraction problems for school-age children with the ability to customize the problems for different levels of difficulty.
 
-Check out <http://www.gravitybell.com/math> for working example.
+Check out <http://www.gravitybell.com/math> for working demo.
 
 
 ## What's included?
@@ -26,6 +26,15 @@ kids-math/
 - IE 10+
 - Safari
 - Firefox
+
+
+## Used frameworks and libraries
+
+### JavaScript
+* [jQuery 2.1.1](http://jquery.com/)
+
+### Icon Fonts
+* [Font Awesome 4.2.0](http://fortawesome.github.io/Font-Awesome/)
 
 
 ## License
