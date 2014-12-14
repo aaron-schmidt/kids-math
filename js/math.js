@@ -94,12 +94,12 @@ GB.Math = function()
 		};
 
 		var html = [];
-		html.push("<li>Number of problems: " + numbers.total + "</li>");
+		html.push("<li>Unanswered: " + (numbers.total - numbers.right - numbers.wrong) + "</li>");
 		if (numbers.right) {
-			html.push("<li>Number correct: " + numbers.right + "</li>");
+			html.push("<li>Correct: " + numbers.right + "</li>");
 		}
 		if (numbers.wrong) {
-			html.push("<li>Number incorrect: " + numbers.wrong + "</li>");
+			html.push("<li>Incorrect: " + numbers.wrong + "</li>");
 		}
 
 		$('#summary').html(html.join(''));

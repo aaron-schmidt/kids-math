@@ -55,8 +55,11 @@ body {
 	margin-right: 0.3rem;
 }
 .content {
-	padding: 20px 16px;
 	background-color: #FFF;
+}
+.content,
+.footer {
+	padding: 1rem 16px;
 }
 
 /* -----[ Numbers ]--------------------------------------------------------------------- */
