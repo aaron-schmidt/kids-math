@@ -44,12 +44,12 @@ body {
 .nav,
 .footer {
 	padding: 10px 16px;
+	color: rgba(0, 0, 0, 0.5);
 	font-family: Arial,sans-serif;
 	font-size: 14px;
 }
 .nav {
-	background-color: #41B5E8;
-	color: rgba(0, 0, 0, 0.5);
+	background-color: #0692CF;
 }
 .nav label {
 	margin-right: 0.3rem;
@@ -87,6 +87,21 @@ body {
 }
 
 /* -----[ Input ]--------------------------------------------------------------------- */
+
+nav button {
+	margin: 0 0.5rem;
+	padding: 5px 10px;
+	background: #FFB700;
+	border: 0;
+	border-radius: 5px;
+	color: rgba(0, 0, 0, 0.6);
+	font-weight: bold;
+	cursor: pointer;
+}
+nav button:hover {
+	background: #FFCE51;
+	color: #000;
+}
 
 nav input[type=text],
 .answer {

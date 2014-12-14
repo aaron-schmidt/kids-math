@@ -53,9 +53,11 @@ GB.Math = function()
 	}
 
 	//--------------------------------------------------------------
-	function applyOptions()
+	function applyOptions(e)
 	{
 		console.log('GB.Math.applyOptions');
+
+		e.preventDefault();
 	}
 
 	//--------------------------------------------------------------
