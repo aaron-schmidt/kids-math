@@ -28,12 +28,9 @@ kids-math/
 - Firefox
 
 
-## Used frameworks and libraries
+## Frameworks and libraries
 
-### JavaScript
 * [jQuery 2.1.1](http://jquery.com/)
-
-### Icon Fonts
 * [Font Awesome 4.2.0](http://fortawesome.github.io/Font-Awesome/)
 
 
